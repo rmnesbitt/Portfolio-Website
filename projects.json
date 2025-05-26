@@ -10,5 +10,17 @@
       "Auto-updates from CSV using pandas"
     ],
     "github": "https://github.com/yourusername/strategy-scoring"
+  },
+  {
+    "title": "Strategy Scoring",
+    "subtitle": "Ranked initiatives by ROI & strategic fit",
+    "tools": ["Python", "Excel", "Tableau"],
+    "summary": "A compact scoring model for evaluating business initiatives.",
+    "details": [
+      "Built weighted scoring matrix (normalized 0–1)",
+      "Visualized in Tableau with ranking filters",
+      "Auto-updates from CSV using pandas"
+    ],
+    "github": "https://github.com/yourusername/strategy-scoring"
   }
 ]

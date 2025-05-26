@@ -11,8 +11,6 @@ header, footer {
 }
 .contact a {
   margin: 0 10px;
-  color: #0a84ff;
-  text-decoration: none;
 }
 #about-top {
   max-width: 600px;
@@ -24,13 +22,33 @@ header, footer {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 1em;
+  margin-top: 2em;
 }
-.badge {
-  background: #2c2c2e;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 0.85rem;
+.icon-badge {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+.icon-badge:hover {
+  transform: scale(1.5);
+  background: rgba(255, 255, 255, 0.15);
+}
+.icon-badge:hover .skill-icon {
+  transform: scale(1.1);
+}
+.skill-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 8px;
+  opacity: 0.75;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.skill-icon:hover {
+  opacity: 1;
 }
 main {
   display: grid;
