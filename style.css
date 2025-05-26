@@ -34,11 +34,20 @@ header, footer {
   transition: background 0.2s ease;
 }
 .icon-badge:hover {
-  transform: scale(1.5);
+  transform: scale(1.6);
   background: rgba(255, 255, 255, 0.15);
 }
 .icon-badge:hover .skill-icon {
   transform: scale(1.1);
+}
+.icon-badge:hover .skill-wrap {
+  transform: scale(1.1);
+}
+.skill-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
 }
 .skill-icon {
   width: 64px;
@@ -49,6 +58,12 @@ header, footer {
 }
 .skill-icon:hover {
   opacity: 1;
+}
+.skill-label {
+  padding-top: 0.66em;
+  font-size: .66rem;
+  transform: translateX(4px);
+  opacity: .75;
 }
 main {
   display: grid;
@@ -63,6 +78,7 @@ main {
   transition: transform 0.2s;
 }
 .project-card:hover {
+  background: rgba(255, 255, 255, 0.15);
   transform: translateY(-5px);
 }
 .project-card h3 {
