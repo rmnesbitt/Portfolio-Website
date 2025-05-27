@@ -1,26 +1,44 @@
 [
   {
-    "title": "Strategy Scoring",
-    "subtitle": "Ranked initiatives by ROI & strategic fit",
-    "tools": ["Python", "Excel", "Tableau"],
-    "summary": "A compact scoring model for evaluating business initiatives.",
-    "details": [
-      "Built weighted scoring matrix (normalized 0–1)",
-      "Visualized in Tableau with ranking filters",
-      "Auto-updates from CSV using pandas"
-    ],
-    "github": "https://github.com/yourusername/strategy-scoring"
+    "index": 1,
+    "image": "images/project1.png",
+    "description": "Analyzed customer trends using PostgreSQL and Python, presenting insights through Tableau.",
+    "tools": ["PostgreSQL", "Python", "Tableau"],
+    "github": "https://github.com/yourusername/project1"
   },
   {
-    "title": "Strategy Scoring",
-    "subtitle": "Ranked initiatives by ROI & strategic fit",
-    "tools": ["Python", "Excel", "Tableau"],
-    "summary": "A compact scoring model for evaluating business initiatives.",
-    "details": [
-      "Built weighted scoring matrix (normalized 0–1)",
-      "Visualized in Tableau with ranking filters",
-      "Auto-updates from CSV using pandas"
-    ],
-    "github": "https://github.com/yourusername/strategy-scoring"
+    "index": 2,
+    "image": "images/project2.png",
+    "description": "Built a Tableau dashboard using Excel data to track regional performance metrics.",
+    "tools": ["Excel", "Tableau"],
+    "github": "https://github.com/yourusername/project2"
+  },
+  {
+    "index": 3,
+    "image": "images/project3.png",
+    "description": "Modeled financial forecasts using Python and Jupyter notebooks with visual storytelling.",
+    "tools": ["Python", "Jupyter"],
+    "github": "https://github.com/yourusername/project3"
+  },
+  {
+    "index": 4,
+    "image": "images/project4.png",
+    "description": "Used PostgreSQL and R to explore patterns in transactional retail data.",
+    "tools": ["PostgreSQL", "R"],
+    "github": "https://github.com/yourusername/project4"
+  },
+  {
+    "index": 5,
+    "image": "images/project5.png",
+    "description": "Created interactive PowerPoint visuals summarizing Python-driven analysis of survey data.",
+    "tools": ["Python", "PowerPoint"],
+    "github": "https://github.com/yourusername/project5"
+  },
+  {
+    "index": 6,
+    "image": "images/project6.png",
+    "description": "Streamlined monthly reports by integrating Excel calculations and PowerPoint automation.",
+    "tools": ["Excel", "PowerPoint"],
+    "github": "https://github.com/yourusername/project6"
   }
 ]
