@@ -1,58 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ryan Nesbitt | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css?v=1" />
+  <link rel="icon" href="icons/favicon.png" type="image/png" />
 </head>
-<body>
-  <header>
-    <h1>Ryan Nesbitt</h1>
-    <div class="contact">
-      <a href="https://github.com/rmnesbitt" target="_blank">
-        <img src="icons/github.png" alt="GitHub" class="skill-icon">
-      </a>
-      <a href="https://linkedin.com/in/rmnesbitt" target="_blank">
-        <img src="icons/linkedin.png" alt="LinkedIn" class="skill-icon">
-      </a>
-    </div>
-  </header>
 
-  <section id="about-top">
-    <p>Strategy-driven analyst focused on delivering clear, actionable insights through data.</p>
-    <div class="skills-inline">
-      <div class="icon-badge">
-        <div class="skill-wrap">
-          <img src="icons/postgresql.png" alt="SQL" title="SQL" class="skill-icon">
-          <span class="skill-label">PostgreSQL</span>
-        </div>
-        <div class="skill-wrap">
-          <img src="icons/excel.png" alt="Excel" title="Excel" class="skill-icon">
-          <span class="skill-label offset-label-excel">Excel</span>
-        </div>
-        <div class="skill-wrap">
-          <img src="icons/powerpoint.png" alt="PowerPoint" title="PowerPoint" class="skill-icon">
-          <span class="skill-label">PowerPoint</span>
-        </div>
-        <div class="skill-wrap">
-          <img src="icons/tableau.png" alt="Tableau" title="Tableau" class="skill-icon">
-          <span class="skill-label">Tableau</span>
-        </div>
-        <div class="skill-wrap">
-          <img src="icons/python.png" alt="Python" title="Python" class="skill-icon">
-          <span class="skill-label">Python</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<header class="top-nav">
+  <div class="nav-left">
+    <p>Hi,<br>I'm Ryan</p>
+  </div>
+  <div class="nav-center">
+    <p>
+      I like figuring out how things work—and how to make them work better. Breaking down messy problems, revealing insights, and communicating results clearly, concisely, and without unnecessary complexity.
+    </p>
+  </div>
+  <div class="nav-right">
+    <a href="https://linkedin.com/in/rmnesbitt" target="_blank">
+      <img src="icons/linkedin.png" alt="LinkedIn" class="header-icon">
+    </a>
+    <a href="https://github.com/rmnesbitt" target="_blank">
+      <img src="icons/github.png" alt="GitHub" class="header-icon">
+    </a>
+  </div>
+</header>
 
-  <main id="project-list"></main>
+<section class="proficiencies">
+  <div class="proficiency">
+    <img src="icons/postgre.png" alt="SQL" class="prof-icon">
+    <span class="prof-label">PostgreSQL</span>
+  </div>
+  <div class="proficiency">
+    <img src="icons/excel.png" alt="Excel" class="prof-icon">
+    <span class="prof-label">Excel</span>
+  </div>
+  <div class="proficiency">
+    <img src="icons/powerpoint.png" alt="PowerPoint" class="prof-icon">
+    <span class="prof-label">PowerPoint</span>
+  </div>
+  <div class="break" id="break-600-1" aria-hidden="true"></div>
+  <div class="proficiency">
+    <img src="icons/tableau.png" alt="Tableau" class="prof-icon">
+    <span class="prof-label">Tableau</span>
+  </div>
+  <div class="break" id="break-1000" aria-hidden="true"></div>
+  <div class="proficiency">
+    <img src="icons/python.png" alt="Python" class="prof-icon">
+    <span class="prof-label">Python</span>
+  </div>
+  <div class="break" id="break-600-2" aria-hidden="true"></div>
+  <div class="proficiency">
+    <img src="icons/r.png" alt="R" class="prof-icon">
+    <span class="prof-label">R</span>
+  </div>
+  <div class="proficiency">
+    <img src="icons/jupyter.png" alt="Jupyter" class="prof-icon">
+    <span class="prof-label">Jupyter</span>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2025 Ryan Nesbitt</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<section id="project-grid"></section>
+<script src="script.js"></script>
