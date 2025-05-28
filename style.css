@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: #4002A2; /* deep purple */
-    background: radial-gradient(circle at 30% 30%, #6D2BF5, #1A0040);
+    background: radial-gradient(circle at 22.5% 22.5%, #6D2BF5, #1A0040);
     color: #FFDE59;            /* golden yellow */
     font-family: 'Alice', serif;
 }
@@ -45,7 +45,7 @@ body {
     padding: 2em 2em;
     gap: 2em;
     max-width: 1050px;
-    maring: 0 auto 0 0;
+    margin: 0 auto 0 0;
 }
 
 .hero-text {
@@ -57,15 +57,14 @@ body {
     font-family: 'Lora', serif;
     font-size: 3rem;
     font-weight: 700;
-    color: #FFD700;
+    color: #FFDE59;
     margin: 0 0 1em;
     line-height: 1.2;
 }
 
 .hero-subtext {
-    font-family: 'Alice', serif;
     font-size: 1.25rem;
-    color: #FFD700;
+    color: #FFDE59;
     max-width: 500px;
     line-height: 1.6;
 }
@@ -81,7 +80,6 @@ body {
 
 .hero-image-wrapper {
     aspect-ratio: 1;
-    width: 30vw;
     max-width: 400px;
     min-width: 300px;
     border-radius: 50%;
@@ -91,6 +89,7 @@ body {
     background-color: transparent;
     position: relative;
     padding: 6px;
+    overflow: visible;
 }
 
 .hero-image img {
@@ -119,7 +118,6 @@ body {
     z-index: 1;
     box-sizing: border-box;
     pointer-events: none;
-    background-color: transparent;
 }
 
 @media (max-width: 800px) {
@@ -179,6 +177,7 @@ body {
     justify-content: center;
     padding: 4em 2em;
     max-width: 1050px;
+    margin: 0 auto;
 }
 
 .project-grid {
@@ -186,7 +185,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
     max-width: 1050px;
-    width: 100%;
+    width: 80%;
 }
 
 .project-card {
@@ -196,7 +195,7 @@ body {
 .card-inner {
     position: relative;
     width: 100%;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 1 / 1;
     transition: transform 0.6s ease;
     transform-style: preserve-3d;
     cursor: pointer;
@@ -228,7 +227,7 @@ body {
     color: #4002A2;
     transform: rotateY(180deg);
     font-size: clamp(1rem, 3vw, 2rem);
-    padding: -4em 2em !important;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -313,6 +312,15 @@ body {
 @media (max-width: 800px) {
     .project-grid {
         grid-template-columns: 1fr;
+        justify-items: center;
+        margin: 0 auto;
+    }
+    .project-grid .project-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
     }
     .project-grid .project-card .card-back {
         font-size: clamp(1.25rem, 5vw, 2rem);
@@ -322,5 +330,9 @@ body {
     .project-grid .project-card .card-back .tool-icon {
         width: clamp(32px, 6vw, 48px);
         height: clamp(32px, 6vw, 48px);
+    }
+
+    .card-back {
+        padding: 0;
     }
 }

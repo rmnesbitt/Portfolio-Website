@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(res => res.json())
         .then(projects => {
             const grid = document.getElementById('project-grid');
+            projects.sort((a, b) => b.index - a.index);
             projects.forEach(project => {
                 const card = document.createElement('div');
                 card.className = 'project-card';
