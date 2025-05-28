@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+    background-color: #4002A2; /* deep purple */
+    background: radial-gradient(circle at 30% 30%, #6D2BF5, #1A0040);
+    color: #FFDE59;            /* golden yellow */
+    font-family: 'Alice', serif;
+}
+
+/* NAV BAR */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5em 0 2em;
+    height: 56px;
+    max-width: 1050px;
+    margin: 0 auto 0 0;
+}
+
+.nav-left {
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+
+.nav-right {
+    display: flex;
+    gap: 1em;
+}
+
+.nav-icon {
+    height: 28px;
+    width: 28px;
+    transition: opacity 0.2s ease;
+}
+
+.nav-icon:hover {
+    transform: scale(1.4);
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2em 2em;
+    gap: 2em;
+    max-width: 1050px;
+    maring: 0 auto 0 0;
+}
+
+.hero-text {
+    max-width: 615px;
+    flex: 1;
+}
+
+.hero-title {
+    font-family: 'Lora', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FFD700;
+    margin: 0 0 1em;
+    line-height: 1.2;
+}
+
+.hero-subtext {
+    font-family: 'Alice', serif;
+    font-size: 1.25rem;
+    color: #FFD700;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image-wrapper {
+    aspect-ratio: 1;
+    width: 30vw;
+    max-width: 400px;
+    min-width: 300px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    position: relative;
+    padding: 6px;
+}
+
+.hero-image img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    min-height: 300px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: transparent;
+    display: block;
+}
+
+.hero-image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 6px solid #FFDE59;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-sizing: border-box;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+@media (max-width: 800px) {
+    .hero {
+        min-width: 420px;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 2em;
+    }
+
+    .hero-image-wrapper {
+        display: none;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .hero-text {
+        max-width: 360px;
+        width: 100%;
+    }
+}
+
+/* PROFICIENCIES */
+.proficiencies {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 2em;
+    padding: 3em 2em;
+    max-width: 1050px;
+    margin: 0 auto 0 0;
+}
+
+.skill-icon {
+    width: 64px;
+    height: 64px;
+    transition: transform 0.2s ease;
+}
+
+.skill-icon:hover {
+    transform: scale(1.4);
+}
+
+@media (max-width: 700px) {
+    .proficiencies {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* CARDS */
+#project {
+    display: flex;
+    justify-content: center;
+    padding: 4em 2em;
+    max-width: 1050px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    max-width: 1050px;
+    width: 100%;
+}
+
+.project-card {
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.project-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-back {
+    background-color: #FFDE59;
+    color: #4002A2;
+    transform: rotateY(180deg);
+    font-size: clamp(1rem, 3vw, 2rem);
+    padding: -4em 2em !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content {
+    flex: 1;
+    padding: 1em 1em 4em 1em; /* generous bottom padding */
+    overflow-y: auto;
+}
+
+.card-back h3 {
+    padding: 0 0.25em;
+    font-size: 1em;
+    margin: 0 0 0.5em 0;
+}
+
+.card-back p {
+    line-height: 1.4;
+    margin: 0;
+    padding: 0 0.25em;
+    font-size: 0.9em;
+}
+
+.card-back a img {
+    width: clamp(21px, 3vw, 28px);
+    height: clamp(21px, 3vw, 28px);
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.card-back a img:hover {
+    transform: scale(1.4);
+}
+
+.card-back .tool-icon {
+    padding: 0 1em;
+    width: clamp(21px, 3vw, 28px);
+    height: clamp(21px, 3vw, 28px);
+}
+
+.card-back .tool-icon:hover {
+    transform: scale(1.4);
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em 0 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.card-footer .tools {
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+
+.card-footer .tool-icon {
+    width: clamp(21px, 3vw, 28px);
+    height: clamp(21px, 3vw, 28px);
+    padding: 0 0.25em;
+}
+
+.card-footer .tool-icon:hover {
+    transform: scale(1.4);
+}
+
+.card-footer .github-link img {
+    width: clamp(21px, 3vw, 28px);
+    height: clamp(21px, 3vw, 28px);
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.card-footer .github-link img:hover {
+    transform: scale(1.4);
+}
+
+@media (max-width: 800px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-grid .project-card .card-back {
+        font-size: clamp(1.25rem, 5vw, 2rem);
+    }
+
+    .project-grid .project-card .card-back a img,
+    .project-grid .project-card .card-back .tool-icon {
+        width: clamp(32px, 6vw, 48px);
+        height: clamp(32px, 6vw, 48px);
+    }
+}

@@ -4,60 +4,48 @@
   <title>Ryan Nesbitt | Portfolio</title>
   <link rel="stylesheet" href="style.css?v=1" />
   <link rel="icon" href="icons/favicon.png" type="image/png" />
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap" rel="stylesheet"></head>
 
 <header class="top-nav">
-  <div class="nav-left">
-    <p>Hi,<br>I'm Ryan</p>
-  </div>
-  <div class="nav-center">
-    <p>
-      I like figuring out how things work—and how to make them work better. Breaking down messy problems, revealing insights, and communicating results clearly, concisely, and without unnecessary complexity.
-    </p>
-  </div>
+  <div class="nav-left">Ryan Nesbitt</div>
   <div class="nav-right">
-    <a href="https://linkedin.com/in/rmnesbitt" target="_blank">
-      <img src="icons/linkedin.png" alt="LinkedIn" class="header-icon">
-    </a>
     <a href="https://github.com/rmnesbitt" target="_blank">
-      <img src="icons/github.png" alt="GitHub" class="header-icon">
+      <img src="icons/github.png" alt="GitHub" class="nav-icon" />
+    </a>
+    <a href="https://linkedin.com/in/rmnesbitt" target="_blank">
+      <img src="icons/linkedin.png" alt="LinkedIn" class="nav-icon" />
     </a>
   </div>
 </header>
 
-<section class="proficiencies">
-  <div class="proficiency">
-    <img src="icons/postgre.png" alt="SQL" class="prof-icon">
-    <span class="prof-label">PostgreSQL</span>
+<section class="hero">
+  <div class="hero-text">
+    <h1 class="hero-title">Transforming Complexity into Clarity</h1>
+    <p class="hero-subtext">
+      Don’t just solve problems—break them down until they make sense. Ask the questions no one’s asking, find the hidden patterns and bring structure to the chaos.
+    </p>
   </div>
-  <div class="proficiency">
-    <img src="icons/excel.png" alt="Excel" class="prof-icon">
-    <span class="prof-label">Excel</span>
-  </div>
-  <div class="proficiency">
-    <img src="icons/powerpoint.png" alt="PowerPoint" class="prof-icon">
-    <span class="prof-label">PowerPoint</span>
-  </div>
-  <div class="break" id="break-600-1" aria-hidden="true"></div>
-  <div class="proficiency">
-    <img src="icons/tableau.png" alt="Tableau" class="prof-icon">
-    <span class="prof-label">Tableau</span>
-  </div>
-  <div class="break" id="break-1000" aria-hidden="true"></div>
-  <div class="proficiency">
-    <img src="icons/python.png" alt="Python" class="prof-icon">
-    <span class="prof-label">Python</span>
-  </div>
-  <div class="break" id="break-600-2" aria-hidden="true"></div>
-  <div class="proficiency">
-    <img src="icons/r.png" alt="R" class="prof-icon">
-    <span class="prof-label">R</span>
-  </div>
-  <div class="proficiency">
-    <img src="icons/jupyter.png" alt="Jupyter" class="prof-icon">
-    <span class="prof-label">Jupyter</span>
+  <div class="hero-image-wrapper">
+    <div class="hero-image">
+        <img src="images/hero.png" alt="data analysis" />
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="project-grid"></section>
+<section class="proficiencies">
+  <img src="icons/sql.png" alt="PostgreSQL" class="skill-icon" />
+  <img src="icons/excel.png" alt="Excel" class="skill-icon" />
+  <img src="icons/powerpoint.png" alt="PowerPoint" class="skill-icon" />
+  <img src="icons/tableau.png" alt="Tableau" class="skill-icon" />
+  <img src="icons/python.png" alt="Python" class="skill-icon" />
+  <img src="icons/r.png" alt="R" class="skill-icon" />
+</section>
+
+<section id="project">
+  <div class="project-grid" id="project-grid">
+  </div>
+</section>
+
 <script src="script.js"></script>

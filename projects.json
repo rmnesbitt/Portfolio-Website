@@ -1,0 +1,50 @@
+[
+  {
+    "index": 1,
+    "title": "Strategy Scoring Tool",
+    "image": "images/project1.png",
+    "tools": ["Excel", "PowerPoint", "Python"],
+    "description": "Evaluated and ranked strategic initiatives using weighted scoring and dashboards.",
+    "github": "https://github.com/yourusername/project1"
+  },
+  {
+    "index": 2,
+    "title": "Customer Portfolio Tracker",
+    "image": "images/project2.png",
+    "tools": ["SQL", "Tableau", "Python"],
+    "description": "Built an interactive dashboard to monitor engagement trends across customer segments.",
+    "github": "https://github.com/yourusername/project2"
+  },
+  {
+    "index": 3,
+    "title": "Expense Forecast Model",
+    "image": "images/project3.png",
+    "tools": ["Excel", "Python"],
+    "description": "Created a predictive model to forecast team-level spend based on historical trends.",
+    "github": "https://github.com/yourusername/project3"
+  },
+  {
+    "index": 4,
+    "title": "Survey Insights Report",
+    "image": "images/project4.png",
+    "tools": ["PowerPoint", "Python"],
+    "description": "Summarized key survey insights using automated Python analysis and clean slide visuals.",
+    "github": "https://github.com/yourusername/project4"
+  },
+  {
+    "index": 5,
+    "title": "Loan Risk Classifier",
+    "image": "images/project5.png",
+    "tools": ["Python", "R"],
+    "description": "Used logistic regression and decision trees to categorize loan applicants by risk tier.",
+    "github": "https://github.com/yourusername/project5"
+  },
+  {
+    "index": 6,
+    "title": "KPI Dashboard Builder",
+    "image": "images/project6.png",
+    "tools": ["SQL", "Tableau"],
+    "description": "Automated KPI refresh pipeline and created visualizations to track operational performance.",
+    "github": "https://github.com/yourusername/project6"
+  }
+]
