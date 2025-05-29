@@ -3,7 +3,7 @@
     "index": 1,
     "title": "NBA Playoff Predictions",
     "image": "images/project1.png",
-    "description": "This project analyzes patterns and provides strategic insights using modern data tools.",
+    "description": "Used season-long team statistics to predict playoff qualification and performance, showcasing statistical modeling for sports outcome forecasting.",
     "tools": ["SQL", "Python"],
     "github": "https://github.com/rmnesbitt/NBA-Playoff-Predictions"
   },
@@ -11,7 +11,7 @@
     "index": 2,
     "title": "Student Success Patterns",
     "image": "images/project2.png",
-    "description": "This project analyzes patterns and provides strategic insights using modern data tools.",
+    "description": "Analyzed lifestyle factors like sleep, exercise, and study habits to identify which behaviors most strongly impact students’ academic performance.",
     "tools": ["SQL", "Python"],
     "github": "https://github.com/rmnesbitt/Student-Success-Patterns"
   },
@@ -19,7 +19,7 @@
     "index": 3,
     "title": "Investor Behavior Patterns",
     "image": "images/project3.png",
-    "description": "This project analyzes patterns and provides strategic insights using modern data tools.",
+    "description": "Explored investor activity across regions, risk levels, and product types to identify profitable segments and inform personalized engagement strategies.",
     "tools": ["Excel", "Python"],
     "github": "https://github.com/rmnesbitt/Investor-Behavior-Patterns"
   },
@@ -27,7 +27,7 @@
     "index": 4,
     "title": "Strategic Opportunity Assessment",
     "image": "images/project4.png",
-    "description": "This project analyzes patterns and provides strategic insights using modern data tools.",
+    "description": "Scored 1M simulated B2B accounts across five industries to uncover top growth opportunities based on revenue, retention, expansion, and strategic fit.",
     "tools": ["SQL","Excel"],
     "github": "https://github.com/rmnesbitt/Strategic-Opportunity-Assessment"
   },
@@ -35,7 +35,7 @@
     "index": 5,
     "title": "Competitive Positioning Matrix",
     "image": "images/project5.png",
-    "description": "This project analyzes patterns and provides strategic insights using modern data tools.",
+    "description": "Built a 2x2 market matrix using brand perception and reach to visualize competitive positioning and recommend strategic moves for differentiation.",
     "tools": ["SQL", "Python", "PowerPoint"],
     "github": "https://github.com/rmnesbitt/Competitive-Positioning-Matrix"
   }
