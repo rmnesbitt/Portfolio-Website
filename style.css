@@ -1,8 +1,8 @@
 body {
     margin: 0;
-    background-color: #4002A2; /* deep purple */
+    background-color: #4002A2;
     background: radial-gradient(circle at 22.5% 22.5%, #6D2BF5, #1A0040);
-    color: #FFDE59;            /* golden yellow */
+    color: #FFDE59;
     font-family: 'Alice', serif;
 }
 
@@ -13,7 +13,7 @@ body {
     align-items: center;
     padding: 0 2.5em 0 2em;
     height: 56px;
-    max-width: 1050px;
+    max-width: 1000px;
     margin: 0 auto 0 0;
 }
 
@@ -44,7 +44,7 @@ body {
     align-items: center;
     padding: 2em 2em;
     gap: 2em;
-    max-width: 1050px;
+    max-width: 1000px;
     margin: 0 auto 0 0;
 }
 
@@ -120,7 +120,7 @@ body {
     pointer-events: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .hero {
         min-width: 420px;
         flex-direction: column;
@@ -151,7 +151,7 @@ body {
     align-items: center;
     gap: 2em;
     padding: 3em 2em;
-    max-width: 1050px;
+    max-width: 1000px;
     margin: 0 auto 0 0;
 }
 
@@ -165,9 +165,9 @@ body {
     transform: scale(1.4);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     .proficiencies {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 2fr);
     }
 }
 
@@ -175,21 +175,23 @@ body {
 #project {
     display: flex;
     justify-content: center;
-    padding: 4em 2em;
-    max-width: 1050px;
-    margin: 0 auto;
+    padding: 2em 1em;
+    max-width: 1000px;
+    margin: 0;
 }
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
-    max-width: 1050px;
-    width: 80%;
+    max-width: 1000px;
+    min-width: 360px;
+    width: 90%;
 }
 
 .project-card {
     perspective: 1000px;
+    width: 100%;
 }
 
 .card-inner {
@@ -226,7 +228,6 @@ body {
     background-color: #FFDE59;
     color: #4002A2;
     transform: rotateY(180deg);
-    font-size: clamp(1rem, 3vw, 2rem);
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -235,13 +236,13 @@ body {
 
 .card-content {
     flex: 1;
-    padding: 1em 1em 4em 1em; /* generous bottom padding */
+    padding: 1em 1em 4em 1em;
     overflow-y: auto;
 }
 
 .card-back h3 {
     padding: 0 0.25em;
-    font-size: 1em;
+    font-size: 1.9em;
     margin: 0 0 0.5em 0;
 }
 
@@ -249,7 +250,7 @@ body {
     line-height: 1.4;
     margin: 0;
     padding: 0 0.25em;
-    font-size: 0.9em;
+    font-size: 1.5em;
 }
 
 .card-back a img {
@@ -309,30 +310,137 @@ body {
     transform: scale(1.4);
 }
 
+@media (max-width: 1000px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+    .project-card {
+        width: 100%
+    }
+    .card-back h3 {
+        font-size: 1.9rem;
+    }
+    .card-back p {
+        font-size: 1.5rem;
+    }
+    img.tool-icon {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+    .project-card {
+        width: 100%
+    }
+    .card-back h3 {
+        font-size: 1.6rem;
+    }
+    .card-back p {
+        font-size: 1.35rem;
+    }
+    img.tool-icon {
+        width: 56px;
+        height: 56px;
+    }
+}
+
 @media (max-width: 800px) {
     .project-grid {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr)
     }
-    .project-grid .project-card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin: 0 auto;
+    .project-card {
+        width: 100%
     }
-    .project-grid .project-card .card-back {
-        font-size: clamp(1.25rem, 5vw, 2rem);
+    .card-back h3 {
+        font-size: 1.36rem;
     }
+    .card-back p {
+        font-size: 1.175rem;
+    }
+    img.tool-icon {
+        width: 56px;
+        height: 56px;
+    }
+}
 
-    .project-grid .project-card .card-back a img,
-    .project-grid .project-card .card-back .tool-icon {
-        width: clamp(32px, 6vw, 48px);
-        height: clamp(32px, 6vw, 48px);
+@media (max-width: 700px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
+    .project-card {
+        width: 100%
+    }
+    .card-back h3 {
+        font-size: 1.25rem;
+    }
+    .card-back p {
+        font-size: 1rem;
+    }
+    .card-footer {
+        height: 10%
+    }
+    .card-footer .tool-icon {
+        width: 33px;
+        height: 33px;
+    }
+    .card-footer .github-link img {
+        width: 33px;
+        height: 33px;
+    }
+}
 
-    .card-back {
-        padding: 0;
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .project-card {
+        width: 100%
+    }
+    .card-back h3 {
+        font-size: 2.2rem;
+    }
+    .card-back p {
+        font-size: 1.38rem;
+    }
+    .card-footer {
+        height: 10%
+    }
+    .card-footer .tool-icon {
+        width: 26px;
+        height: 26px;
+    }
+    .card-footer .github-link img {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media (max-width: 500px) {
+    .project-grid {
+        grid-template-columns: repeat(1, 1fr)
+    }
+    .project-card {
+        width: 100%
+    }
+    .card-back h3 {
+        font-size: 1.9rem;
+    }
+    .card-back p {
+        font-size: 1.33rem;
+    }
+    .card-footer {
+        height: 10%
+    }
+    .card-footer .tool-icon {
+        width: 26px;
+        height: 26px;
+    }
+    .card-footer .github-link img {
+        width: 26px;
+        height: 26px;
     }
 }
