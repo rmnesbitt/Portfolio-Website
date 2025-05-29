@@ -1,9 +1,13 @@
-body {
+:root {
+    color-scheme: only light;
+}
+
+html, body {
     margin: 0;
     background-color: #4002A2;
-    background: radial-gradient(circle at 22.5% 22.5%, #6D2BF5, #1A0040);
-    color: #FFDE59;
+    background: radial-gradient(circle at top left, #6D2BF5, #1A0040);    color: #FFDE59;
     font-family: 'Alice', serif;
+    overflow-x: hidden;
 }
 
 /* NAV BAR */
@@ -13,8 +17,8 @@ body {
     align-items: center;
     padding: 0 2.5em 0 2em;
     height: 56px;
-    max-width: 1000px;
-    margin: 0 auto 0 0;
+    max-width: 990px;
+    margin: 0;
 }
 
 .nav-left {
@@ -45,7 +49,7 @@ body {
     padding: 2em 2em;
     gap: 2em;
     max-width: 1000px;
-    margin: 0 auto 0 0;
+    margin: 0;
 }
 
 .hero-text {
@@ -151,8 +155,8 @@ body {
     align-items: center;
     gap: 2em;
     padding: 3em 2em;
-    max-width: 1000px;
-    margin: 0 auto 0 0;
+    max-width: 990px;
+    margin: 0;
 }
 
 .skill-icon {
@@ -237,7 +241,13 @@ body {
 .card-content {
     flex: 1;
     padding: 1em 1em 4em 1em;
-    overflow-y: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.card-content::-webkit-scrollbar {
+    display: none;
 }
 
 .card-back h3 {
@@ -323,9 +333,13 @@ body {
     .card-back p {
         font-size: 1.5rem;
     }
-    img.tool-icon {
-        width: 56px;
-        height: 56px;
+    .card-footer .tool-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .card-footer .github-link img {
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -342,9 +356,13 @@ body {
     .card-back p {
         font-size: 1.35rem;
     }
-    img.tool-icon {
-        width: 56px;
-        height: 56px;
+    .card-footer .tool-icon {
+        width: 29px;
+        height: 29px;
+    }
+    .card-footer .github-link img {
+        width: 28.5px;
+        height: 28.5px;
     }
 }
 
@@ -361,9 +379,13 @@ body {
     .card-back p {
         font-size: 1.175rem;
     }
-    img.tool-icon {
-        width: 56px;
-        height: 56px;
+    .card-footer .tool-icon {
+        width: 27px;
+        height: 27px;
+    }
+    .card-footer .github-link img {
+        width: 27px;
+        height: 27px;
     }
 }
 
@@ -375,21 +397,21 @@ body {
         width: 100%
     }
     .card-back h3 {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
     }
     .card-back p {
-        font-size: 1rem;
+        font-size: .9rem;
     }
     .card-footer {
         height: 10%
     }
     .card-footer .tool-icon {
-        width: 33px;
-        height: 33px;
+        width: 24px;
+        height: 24px;
     }
     .card-footer .github-link img {
-        width: 33px;
-        height: 33px;
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -410,12 +432,12 @@ body {
         height: 10%
     }
     .card-footer .tool-icon {
-        width: 26px;
-        height: 26px;
+        width: 33px;
+        height: 33px;
     }
     .card-footer .github-link img {
-        width: 26px;
-        height: 26px;
+        width: 33px;
+        height: 33px;
     }
 }
 
@@ -436,11 +458,11 @@ body {
         height: 10%
     }
     .card-footer .tool-icon {
-        width: 26px;
-        height: 26px;
+        width: 30px;
+        height: 30px;
     }
     .card-footer .github-link img {
-        width: 26px;
-        height: 26px;
+        width: 30px;
+        height: 30px;
     }
 }
