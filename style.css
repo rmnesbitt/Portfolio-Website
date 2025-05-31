@@ -177,6 +177,19 @@ html, body {
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 
+.skill-wrapper:active {
+    transform: scale(0.8);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.skill-wrapper.selected {
+    outline: 2px solid #FFDE59;
+    outline-offset: 4px;
+    background: #5527B1;
+    box-shadow: 0 0 10px rgba(255, 222, 89, 0.5);
+    transform: scale(1);
+}
+
 .skill-icon {
     width: 56px;
     height: 56px;

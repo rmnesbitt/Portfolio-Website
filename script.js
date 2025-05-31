@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             projects.forEach(project => {
                 const card = document.createElement('div');
                 card.className = 'project-card';
+                card.dataset.skills = project.tools.map(t => t.toLowerCase()).join(',');
 
                 card.innerHTML = `
           <div class="card-inner">
@@ -38,4 +39,47 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         })
         .catch(err => console.error('Failed to load projects.json:', err));
+
+    document.querySelectorAll('.skill-wrapper').forEach(skill => {
+        skill.addEventListener('click', () => {
+            const skillKey = skill.dataset.skill;
+            const isAlreadySelected = skill.classList.contains('selected');
+            const allCards = document.querySelectorAll('.project-card');
+
+            // Clear all selected states
+            document.querySelectorAll('.skill-wrapper').forEach(s => s.classList.remove('selected'));
+
+            if (isAlreadySelected) {
+                // Flip all back if toggling off
+                allCards.forEach((card, index) => {
+                    if (card.classList.contains('flipped')) {
+                        setTimeout(() => {
+                            card.classList.remove('flipped');
+                        }, index * 200);
+                    }
+                });
+            } else {
+                // Select this skill
+                skill.classList.add('selected');
+
+                const matchingCards = Array.from(allCards).filter(card => {
+                    const cardSkills = card.dataset.skills?.split(',') || [];
+                    return cardSkills.includes(skillKey);
+                });
+
+                allCards.forEach((card, index) => {
+                    const isMatch = matchingCards.includes(card);
+                    const isFlipped = card.classList.contains('flipped');
+
+                    setTimeout(() => {
+                        if (isMatch && !isFlipped) {
+                            card.classList.add('flipped');
+                        } else if (!isMatch && isFlipped) {
+                            card.classList.remove('flipped');
+                        }
+                    }, index * 200);
+                });
+            }
+        });
+    });
 });
