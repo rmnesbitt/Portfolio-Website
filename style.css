@@ -153,23 +153,36 @@ html, body {
     grid-template-columns: repeat(6, 1fr);
     justify-items: center;
     align-items: center;
-    gap: 2em;
-    padding: 3em 2em;
+    gap: 1em;
+    padding: 2em 1em;
     max-width: 990px;
     margin: 0;
 }
 
+.skill-wrapper {
+    padding: 15px;
+    background: #5527B1;
+    border-radius: 20px;
+    box-shadow:
+            inset 0 1px 3px rgba(255, 255, 255, 0.05),
+            0 6px 16px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skill-wrapper:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
 .skill-icon {
-    width: 64px;
-    height: 64px;
-    transition: transform 0.2s ease;
+    width: 56px;
+    height: 56px;
 }
 
-.skill-icon:hover {
-    transform: scale(1.4);
-}
-
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .proficiencies {
         grid-template-columns: repeat(3, 2fr);
     }
