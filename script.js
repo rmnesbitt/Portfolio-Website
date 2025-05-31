@@ -78,18 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        let touchHandled = false;
-
-        skill.addEventListener('touchend', (e) => {
-            touchHandled = true;
+        skill.addEventListener('pointerup', (e) => {
             handleToggle();
-        });
-
-        skill.addEventListener('click', (e) => {
-            if (!touchHandled) {
-                handleToggle();
-            }
-            touchHandled = false;
         });
     });
 });
