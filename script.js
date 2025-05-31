@@ -41,16 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(err => console.error('Failed to load projects.json:', err));
 
     document.querySelectorAll('.skill-wrapper').forEach(skill => {
-        skill.addEventListener('click', () => {
+        const handleToggle = () => {
             const skillKey = skill.dataset.skill;
             const isAlreadySelected = skill.classList.contains('selected');
             const allCards = document.querySelectorAll('.project-card');
 
-            // Clear all selected states
             document.querySelectorAll('.skill-wrapper').forEach(s => s.classList.remove('selected'));
 
             if (isAlreadySelected) {
-                // Flip all back if toggling off
                 allCards.forEach((card, index) => {
                     if (card.classList.contains('flipped')) {
                         setTimeout(() => {
@@ -59,9 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             } else {
-                // Select this skill
                 skill.classList.add('selected');
-
                 const matchingCards = Array.from(allCards).filter(card => {
                     const cardSkills = card.dataset.skills?.split(',') || [];
                     return cardSkills.includes(skillKey);
@@ -80,6 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, index * 200);
                 });
             }
-        });
+        };
+
+        skill.addEventListener('click', handleToggle);
+        skill.addEventListener('touchend', handleToggle);
     });
 });
